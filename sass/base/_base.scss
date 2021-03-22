@@ -10,14 +10,11 @@
 html {
   font-size: 62.5%; // 1 rem = 10px  10px/16px = 62.5
 
-  @include respond(tab-land) { // width < 900px
+  @include respond(tab-land) { // width < 1200px
     font-size: 56.25%;  // 1 rem = 9 px
   }
-  @include respond(tab-port) { // width < 600px
+  @include respond(tab-port) { // width < 900px
     font-size: 50%;  // 1 rem = 8 px
-  }
-  @include respond(phone) { // width < 600px
-    font-size: 30%;  // 1 rem = 8 px
   }
   @include respond(big-desktop) {
     font-size: 75%; //1 rem = 12px
@@ -26,4 +23,10 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) { 
+    padding: 0; 
+  }
+
 }
